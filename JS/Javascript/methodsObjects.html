@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+    function people(name,age){
+    this.name = name;
+    this.age = age;
+    this.yearsUntilRetire = yearsLeft;
+    //no parenthesis in this way it will get to know that this function is associated with the object
+
+    }
+    function yearsLeft() {
+        var numYears = 65 - this.age;
+        return numYears;
+    }
+    var natalie = new people("Natalie Portman",28);
+    var shubham = new people("Shubham Londhe",25);
+
+
+
+    </script>
+
+
+</head>
+<body>
+<script type="text/javascript">
+    document.write(shubham.yearsUntilRetire());
+
+</script>
+
+
+</body>
+</html>

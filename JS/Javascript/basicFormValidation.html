@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function validator() {
+            if(document.shubhamsForm.theBox.checked)
+                alert("Yes it is checked");
+            else
+                alert("Please check the box");
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <form name="shubhamsForm">
+        <input type="checkbox" name="theBox"/>
+        <input type="button" value="Press me" onClick="validator()"/>
+
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+       /* function doSomething(){
+            document.write("Tuna ");
+        }
+        setInterval("doSomething()",1000);
+        */
+
+        function printTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var mins = now.getMinutes();
+            var seconds = now.getSeconds();
+            document.write(hours+":"+mins+":"+seconds+"<br />");
+
+
+        }
+        setInterval("printTime()",1000);
+        //1000 milliseconds is 1 second
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!--{{ album }}-->
+
+<img src="{{album.album_logo}}">
+
+<h1>{{ album.album_title}}</h1>
+<h3>{{album.artist}}</h3>
+
+<!--<ul>-->
+<!--    {% for song in album.song_set.all %}-->
+<!--    <li>{{song.song_title}} - {{song.file_type}}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+
+{% if error_message %}
+    <p><strong>{{error_message}}</strong></p>
+{% endif %}
+
+<form action="{% url 'music:favorite' album.id %}" method="post">
+    {% csrf_token %}
+    {% for song in album.song_set.all %}
+        <input type="radio" id="song{{forloop.counter}}" name="song" value="{{song.id}}">
+        <label for="song{{forloop.counter}}">
+        {{song.song_title}}
+            {% if song.is_favorite %}
+                <img src="data:image/png;base64,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" />
+            {% endif %}
+        </label><br>
+    {% endfor %}
+    <input type="submit" value="Favorite/Unfavorite">
+</form>
+
